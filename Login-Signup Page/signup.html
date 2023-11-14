@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>SignUp </title>
+</head>
+<body>
+    <div class="main"></div>
+    <div class="container">
+        <div class="form-box">
+        <div class="button-box">
+           
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="login()">Sign up</button>
+             <button type="button" class="toggle-btn" onclick="signup()">Log in</button>
+             </div>
+           <form id="login" class="input">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="email" class="input-field" placeholder="Email Id" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                 <input type="checkbox" class="check-box"><span>I agree to the <a href="http://127.0.0.1:5500/t&c.html">terms & conditions</a></span>
+                <button type="submit" class="submit-btn">Sign up</button>
+            </form>
+            <form id="signup" class="input">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required><input type="checkbox" class="check-box" ><span>Remember Password</span>
+                <button type="submit" class="submit-btn">Log in</button>
+               
+            </form>
+        </div>
+        
+    </div>
+    <script>
+         var x = document.getElementById("login");
+         var y = document.getElementById("signup");
+         var z = document.getElementById("btn");
+
+         function signup(){
+            x.style.left = "-400px";
+            y.style.left = "50px"; 
+            z.style.left = "110px";
+         }
+         function login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+         }
+    </script>
+</body>
+</html>
