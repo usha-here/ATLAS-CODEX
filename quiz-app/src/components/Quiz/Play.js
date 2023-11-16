@@ -1,7 +1,10 @@
 import React, { Component, Fragment} from "react";
+import { useContext, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { useState } from 'react'
 import { quiz } from '../../questions'
+import {Link} from 'react-router-dom';
+
 
 const Play = () =>{
 
@@ -15,9 +18,22 @@ const Play = () =>{
         wrongAnswers: 0,
         skippedQuestions: 0,
     })
-
+    
+    const[counter, setCounter] = useState(100);
+    
     const { questions } = quiz
     const { question, choices, correctAnswer } = questions[activeQuestion]
+
+    useEffect(() => {
+        //timer for quiz - when timer reach 0 end screen appear
+        const timer = counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
+        if (timer == 0) {
+            setShowResult(true);
+        }
+        
+        return () => clearInterval(timer);
+    }, [counter])
+    
 
     const addLeadingZero = (number) => (number > 9 ? number :`0${number}`)
     const onAnswerSelected = (answer,index) => {
@@ -73,9 +89,15 @@ const Play = () =>{
                     <div>
                     <div><h1>Quiz</h1></div>
                     <div>
+                        
+                        
                         <span className="active-question-no">{addLeadingZero(activeQuestion + 1)}</span>
-                        <span className="total-questions">/{addLeadingZero(questions.length)}</span>
-
+                                <span className="total-questions">/{addLeadingZero(questions.length)}</span>
+                        <div className="timer-container">
+                            <div className="top-right" style={{color: counter < 60 && '#FF5B52'}}>
+                                {Math.floor(counter/60)}:{counter%60}
+                            </div>
+                        </div>
                     </div>
                     <h2>{question}</h2>
                     <ul>
@@ -107,11 +129,15 @@ const Play = () =>{
                             Skipped Questions:<span> {result.skippedQuestions}</span>
                         </p>
                         <p>
+                            Unattempted Questions:<span> {questions.length-result.correctAnswers-result.wrongAnswers-result.skippedQuestions}</span>
+                        </p>
+                        <p>
                             Correct Answers:<span> {result.correctAnswers}</span>
                         </p>
                         <p>
                             Wrong Answers:<span> {result.wrongAnswers}</span>
                         </p>
+                        <button id="start-quiz-btn"><Link to="/" >Back</Link></button>
                     </div>
 
                 )
