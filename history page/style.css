@@ -8,7 +8,7 @@ body{
 nav{
     display: flex;
     background:linear-gradient(70deg,#b0e0e6,#003153,grey,#1b5583,black);
-    height: 100px;
+    height: 63px;
     width: 100%;
     align-items: center;
     justify-content: space-between;   
@@ -94,7 +94,7 @@ nav a:hover span{
 } 
 
 .slider{
-    height: 99vh;
+    height: 100vh;
     margin-top: -80px ;
     position: relative;
 }
@@ -135,8 +135,8 @@ nav a:hover span{
     letter-spacing: 10px;
     
 }
-.slider .list .item .content h2{
-    font-size: 100px;
+.slider .list .item .content h3{
+    font-size: 85px;
     margin: 0;
     font-family: cursive;
     width: max-content;
@@ -159,7 +159,7 @@ nav a:hover span{
     
 }
 .slider .list .item.active p:nth-child(1),
-.slider .list .item.active h2,
+.slider .list .item.active h3,
 .slider .list .item.active p:nth-child(3){
     transform: translateY(30px);
     filter: blur(20px);
@@ -167,7 +167,7 @@ nav a:hover span{
     animation: showContent .5s .7s ease-in-out 1 forwards;
 
 }
-.slider .list .item.active h2{
+.slider .list .item.active h3{
     animation-delay: 1s;
 
 }
@@ -244,8 +244,8 @@ nav a:hover span{
         justify-content:start;
         bottom: -10px;
     }
-    .slider .list .item .content h2{
-        font-size: 40px;
+    .slider .list .item .content h3{
+        font-size: 35px;
 
     }
     .arrows{
