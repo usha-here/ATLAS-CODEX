@@ -1,0 +1,81 @@
+.Iss_informations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.iss_data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--tertiary-color);
+    flex-wrap: wrap;
+}
+
+.iss_data p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 10px 0;
+}
+
+.iss_longitude {
+    justify-content: center;
+    font-size: 15px;
+    margin-right: 20px;
+    width: 150px;
+}
+
+.iss_latitude {
+    font-size: 15px;
+    margin-right: 20px;
+    width: 150px;
+}
+
+.iss_altitude {
+    font-size: 15px;
+    margin-right: 20px;
+    width: 150px;
+}
+
+.iss_velocity {
+    font-size: 15px;
+    margin-right: 20px;
+    width: 150px;
+}
+
+.iss_daily {
+    font-size: 15px;
+    margin-right: 20px;
+    width: 150px;
+}
+
+.iss_visibility {
+    font-size: 15px;
+    margin-right: 20px;
+    width: 150px;
+}
+.name{
+    font-size: 15px;
+    margin-right: 20px;
+    width: 150px;
+}
+
+/* MediaQueries Tablette */
+@media screen and (max-width: 768px) {
+    .Iss_informations {
+        padding: 20px;
+    }
+}
+
+/* MediaQueries Mobile */
+@media screen and (max-width: 480px) {
+    .Iss_informations {
+        padding: 10px 10px 0 10px;
+    }
+
+}
