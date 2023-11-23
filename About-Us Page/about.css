@@ -31,113 +31,152 @@ body{
         transform: scale(1.5);
     }
 }
-header {
-	width: 100%;
-	height: 150px;
-	background-color: #444444;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	position: relative;
-	top: 0;
-	border: solid rgb(0,209,205) 1vw;
-  }
-  .head{
-	color: rgb(0,209,205);
-	text-decoration:solid;
-	position: relative;
-	width: 100%;
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	font-size: 64px;
-	font-family: 'Dancing Script', cursive
-}
-.team{
-	position: relative;
-	width: 100%;
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
-.team-content{
-	width: 100%;
-	max-width: 1350px;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-	align-items: center;
-	gap: 2rem;
-	text-align: center;
-	margin-top: 4rem;
-}
-.team-content img{
-	width: 200px;
-	height: auto;
-	border-radius: 15px;
-	margin-bottom: 15px;
-}
-.center h1{
-	color: #fff;
-	font-size: 4rem;
-	text-align: center;
-}
-.box{
-	padding: 16px;
-	background: #1b1229;
-	border-radius: 15px;
-	transition: all .38s ease;
-}
-.box h3{
-	font-size: 23px;
-	font-weight: 600;
-	color: #fff;
-	margin-bottom: 8px;
-}
-.box h5{
-	font-size: 15px;
-	font-weight: 600;
-	color: #b7b4bb;
-	margin-bottom: 15px;
-	letter-spacing: 2px;
-}
-.icons i{
-	display: inline-block;
-	color: #fff;
-	font-size: 20px;
-	margin: 0 8px;
-	transition: all .38s ease;
-}
-.icons i:hover{
-	transform: scale(1.2);
-}
-.box:hover{
-	transform: translateY(-10px);
-	cursor: pointer;
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+   color: #54677c;
 }
 
-@media(max-width: 1240px){
-	.team{
-		width: 100%;
-		height: auto;
-		padding: 90px 2%;
-	}
-	.center h1{
-		font-size: 3.2rem;
-	}
+body {
+   min-height: 100vh;
+   width: 100%;
+   display: flex;
+   
+   justify-content: center;
+   align-items: center;
+   padding: 40px 16px;
 }
-@media(max-width: 700px){
-	.team-content img{
-		width: 100px;
-		height: auto;
-		border-radius: 15px;
-		margin-bottom: 15px;
-	}
-	.head{
-		font-size:50px;
-	}
+.profile{
+   display: flex;
+   flex-wrap: wrap;
+   
+   width: 100%;
+   display: flex;
+   
+   justify-content: center;
+   align-items: center;
+   padding: 40px 16px;
 }
+.hum{
+    color: rgb(0,209,205);
+     display: flex;
+     justify-content: center;
+     text-decoration:solid;
+     font-size: 160px;
+     font-family: 'Dancing Script', cursive
+
+}
+.teem{
+   color:greenyellow;
+    display: flex;
+    justify-content: center;
+    text-decoration:solid;
+    font-size: 60px;
+   padding: 20px;
+
+}
+.card {
+   position: relative;
+   width: 300px;
+   background-color: #fff;
+   border-radius: 8px;
+   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
+   padding: 16px;
+   margin:  56px 24px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.card-image {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   overflow: hidden;
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   box-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.5),
+   0 5px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-image img {
+   width: 100%;
+   transform: scale(1.2);
+}
+
+p {
+   line-height: 24px;
+   letter-spacing: 0.5px;
+   margin-bottom: 12px;
+   text-align: center;
+}
+
+.name {
+   margin-top: 80px;
+   font-size: 1.4em;
+   color: #333;
+   font-weight: bold;
+   letter-spacing: 0.8px;
+   margin-bottom: 8px;
+}
+
+.socials {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+button {
+   margin: 12px 8px;
+   width: 44px;
+   height: 44px;
+   border: none;
+   border-radius: 50%;
+   cursor: pointer;
+   transition: opacity 0.4s;
+}
+
+button:hover {
+   opacity: 0.8;
+}
+
+button i {
+   color: #fff;
+   font-size: 1.4em;
+}
+
+/* Social media colors */
+button.github {
+   background-color: #24292e;
+} 
+
+button.linkdin {
+   background-color: #1da1f2;
+}
+
+button.instagram {
+   background-color: rgb(197, 42, 7)
+} 
+
+ 
+ @media screen and (max-width: 768px) {
+   .hum {
+     font-size: 120px;
+   }
+   .teem {
+      font-size: 50px;
+    }
+ }
+ @media screen and (max-width:480px) {
+   .hum  {
+     font-size: 80px;
+   }
+   .teem{
+      font-size: 40px;
+    }
+ }
